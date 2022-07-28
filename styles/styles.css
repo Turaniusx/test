@@ -1,0 +1,10 @@
+body{
+    background-color: rgb(43, 43, 43);
+}
+div {
+    width: 500px;
+    background-color: white;
+    text-align: center;
+    margin-left: 100px;
+    margin-right: 100px;
+}
