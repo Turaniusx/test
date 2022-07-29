@@ -59,3 +59,7 @@ button:active {
     background-color: rgb(255, 0, 0);
     font-size: 17px;
 }
+.field {
+    width: 140px;
+    border-width: 1px;
+}
