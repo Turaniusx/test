@@ -1,17 +1,27 @@
+font {
+    font-family: Comic Sans Ms;
+}
 body{
-    background-color: rgb(49, 55, 70)
+    background-color: rgb(49, 55, 70);
+    font-family: Open Sans;
+    
 }
 .h1 {
     
     margin-bottom: 50px;
 }
 .main {
+    max-width: 1000px;
     display: block;
-    margin: auto;
-    background-color: rgb(226, 248, 248);
+    margin: 8vh auto 0 auto;
+    border-color: rgb(153, 196, 213);
+    border-radius: 0px;
+    border-width: 1px;
+    background-color: rgb(49, 55, 70);
+    box-shadow: 0px 0px 48px 17px rgb(153, 196, 213);
     height: 800px;
     border: none;
-    width: 1220px;
+    
 }
 .upload {
     color: gray;
@@ -19,69 +29,145 @@ body{
 .div1 {
     border: solid;
     display: inline-block;
-    width: 600px;
+    width: 450px;
     vertical-align: top;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
     border-width: 0px;
+    border-color: rgb(153, 196, 213);
     text-align: center;
+    transition: box-shadow 1s ease-in-out;
+    color: rgb(153, 196, 213);
+    
 }
 .div2 {
     border: solid;
     text-align: center;
-    width: 600px;
+    width: 450px;
     float: right;
     vertical-align: top;
+    transition: box-shadow 1s ease-in-out;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
     border-width: 0px;
+    border-color: rgb(153, 196, 213);
+    color: rgb(153, 196, 213);
+}
+.div1:hover {
+    box-shadow: 0px 0px 70px 12px rgb(153, 196, 213);
+}
+.div2:hover {
+    box-shadow: 0px 0px 70px 12px rgb(153, 196, 213);
 }
 .nav {
     text-align: center;
 }
 button{
-    margin-left: 225px;
-    margin-top: 10px;
+    margin: 2vh auto 0 auto;
     display: block;
     width: 150px;
     height: 35px;
-    background-color: white;
-    color: rgb(255, 37, 37);
+    background-color: rgb(49, 55, 70);
+    color: rgb(153, 196, 213);
     cursor: pointer;
     border: solid;
     border-radius: 5px;
-    border-width: 1px;
-    border-color: rgb(253, 45, 45);
-    transition: background-color 0.1s, color 0.1s, box-shadow 0.08s;
-    box-shadow: 2px 2px 5px rgba(44, 44, 44, 0.8);
+    border-width: 1.5px;
+    border-color: rgb(153, 196, 213);
+    transition: background-color 0.1s, color 0.1s, box-shadow 0.08s ease-in-out;
+    box-shadow: 2px 2px 8px rgba(20, 20, 20, 0.9);
 }
 button:hover {
-    background-color: rgb(246, 74, 74);
-    color: white;
+    background-color: rgb(153, 196, 213);
+    color: rgb(49, 55, 70);
 }
 button:active {
     padding-left: 10px;
     padding-bottom: 10px;
     padding-top: 10px;
     box-shadow: 0 0 0;
-    background-color: rgb(255, 0, 0);
+    background-color: rgb(231, 244, 250);
     font-size: 17px;
+}
+#calcLink {
+    color: rgb(153, 196, 213);
 }
 .field {
     width: 140px;
     border-width: 1px;
 }
-
+/* Calculator.html styles 
+*/ 
 .container {
-    max-width: 400px;
-    margin: 10vh auto 0 auto;
-    box-shadow: 0px 0px 43px 17px rgb(153, 196, 213);
+    max-width: 300px;
+    
+    margin: 15vh auto 0 auto; /* position 15% of the top i horizontalno centrirano*/
+    
+   
+   /* border: solid rgb(153, 196, 213); */
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px; 
+    border-width: 3px; 
+    transition: box-shadow 1s ease-in-out;
+
 }
-#display {
+.container:hover {
+    box-shadow: 0px 0px 43px 10px rgb(153, 196, 213);
+}
+#display {  /* so # oti ne e definirana classata, zimame go ID-to */
     text-align: right;
-    height: 70px;
-    line-height: 70px;
+    height: 60px;
+    line-height: 50px;
     padding: 16px 8px;
+    font-size: 25px;
+    color: rgb(153, 196, 213);
+    max-width: 280px;
+    
+    
+    
 }
 .buttons {
     display: grid;
-    border-bottom: 1px solid #999;
-    border-left: 1px solid #999;
-    grid-template-columns: 1fr 1fr 1fr 1fr; /* fr = fraction */
+    
+    border-bottom: 0px solid rgb(153, 196, 213);
+    border-left: 0px solid rgb(153, 196, 213);
+    border-left: none;
+    border-right: none;
+    grid-template-columns: 1fr 1fr 1fr 1fr; /*4 ednakvi koloni fr = fraction */
+}
+.buttons > div {  /* za da gi imame site 4 rabovi bez kolizija */
+    border-top: 0px solid rgb(153, 196, 213);
+    border-right: 0px solid rgb(153, 196, 213);
+    
+}
+.kopce {
+    border: 0px solid rgb(153, 196, 213);;
+    color: rgb(153, 196, 213);
+    border-left: none;
+    border-right: none;
+    
+    line-height: 75px;
+    text-align: center;
+    font-size: 25px;
+    cursor: pointer;
+    text-shadow: 0px 0px 20px rgb(153, 196, 213);
+    transition: background-color 0.2s, color 0.2s;
+}
+#equal {
+    background-color: rgb(153, 196, 213);
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    text-shadow: none;
+}
+.kopce:hover {
+    
+    background-color: rgb(153, 196, 213);
+    color: rgb(49, 55, 70);
+    
+    
+    
+}
+.goBack {
+    color: rgb(153, 196, 213);
+
 }
