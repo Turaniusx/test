@@ -1,8 +1,8 @@
 
 <?php
-    $name = "dimitar";
-    echo "dimitar";
-    
+    $name = "Turan";
+    echo "dimitar <br>";
+    echo $name;
  ?>
 
 <!DOCTYPE html>
