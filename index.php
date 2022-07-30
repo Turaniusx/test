@@ -1,3 +1,4 @@
+
 <?php
     $name = "dimitar";
     echo "dimitar";
@@ -39,8 +40,7 @@
                     Factorial = <span id="fact"></span>
                 </p>
                 <p><a href="calculator.html" id="calcLink">Click here</a> for an actual calculator</p>
-                <p>WHAAAAAAAAAAAAT</p>
-                <div>What is this</div>
+                
             </div>
         </section>
         
@@ -52,3 +52,4 @@
     
 </body>
 </html>
+
