@@ -5,7 +5,7 @@ let count = 0
 
 function increment() {
     count++
-    num1.textContent = count /*pecate na hmtl-o u tip na text */
+    num1.textContent = count //prints the html in the form of text
     console.log(count)
 }
 function decrement() {
@@ -34,22 +34,40 @@ function execute() {
 }
 ////////Calc scripts
 let display = document.getElementById("display");
-let buttons = Array.from(document.getElementsByClassName("kopce")); //gi konvertirame vo array 
-                                                                    //oti kopcinjata se html kolekcija
+let buttons = Array.from(document.getElementsByClassName("kopce")); //converting the buttons in an array 
+                                                                    //bc the buttons are an html collection
 
-buttons.map(kopce => { //mapirame gi kopcinjata so event listener za click
+buttons.map(kopce => { //buttons are being mapped with an event listener on click
     kopce.addEventListener('click', (e) => { 
         switch(e.target.innerText){
             case 'Ce': display.innerText = ' '; break;
             case '←' : display.innerText = display.innerText.slice(0, -1); break;
             case '=': 
-                try{ //se izvrshuvaat instrukciite vo taj block
+                try{ 
                     display.innerText = eval(display.innerText);
-                } catch { //ako nesto loso se desava, se izvrsuva taj blok
-                    display.innerText = "Error!"; //damn
+                } catch { 
+                    display.innerText = "Error!"; 
                 } break;
-            
+            case '!' :                                     
+                try{
+                    var f=1;
+                    display.innerText = eval(display.innerText);
+                    if (display.innerText < 50) {
+                        for (let i=1; i <= display.innerText; i++){
+                            f *= i;
+                            console.log(display.innerText);
+                        }
+                        display.innerText = f;
+                    } else {
+                        display.innerText = "Try a number smaller than 50"
+                    }
+                    
+                } catch {
+                    display.innerText = "Error!";
+                }
+                 break;
             default: display.innerText += e.target.innerText;
+            console.log(display.innerText);
         }}
     )}
 )
