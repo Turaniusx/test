@@ -5,6 +5,7 @@
     echo $name;
  ?>
 
+<p>ajkshdkasd</p>
 <!DOCTYPE html>
 <html lang="en">
 <head>
