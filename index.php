@@ -1,12 +1,5 @@
 
-<?php
-    $name = "Turan";
-    $age = 5;
-    echo "dimitar <br>";
-    echo "hello my name is " . $name . " my age is " . $age;
- ?>
 
-<p>ajkshdkasd</p>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,7 +13,14 @@
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
-    <nav class="nav">yo</nav>
+    <nav>
+        <div class="wrapper">
+            <a href="index.php"><img src="img/fflogo.png" alt="logo" class="logo"></a>
+            <div class="navButtons"><a href="index.php">Home</a></div>
+            <div class="navButtons"><a href="calculator.html">Calculator</a></div>
+            <div class="navButtons"><a href="signup.php">Login</a></div>
+        </div>
+    </nav>
     <div class="main">
         <section>
             <h1 align="center" class="h1"><br>something</h1>
