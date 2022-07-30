@@ -1,8 +1,9 @@
 
 <?php
     $name = "Turan";
+    $age = 5;
     echo "dimitar <br>";
-    echo $name;
+    echo "hello my name is " . $name . " my age is " . $age;
  ?>
 
 <p>ajkshdkasd</p>
