@@ -1,6 +1,7 @@
 <?php
     $name = "dimitar";
     echo "dimitar";
+    
  ?>
 
 <!DOCTYPE html>
