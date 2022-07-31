@@ -12,8 +12,19 @@
                     <input type="password" name="pass" placeholder="Password..">
                     <input type="password" name="passRep" placeholder="Repeat Password..">
                     <button type="submit" name="submit" class="subButt">Sign Up</button>
-                </form>
+                    </form>
 
+
+<?php
+        if(isset($_GET["error"])) { //error handler
+            if ($_GET["error"] == "emptyinput") {
+                echo "<p>Fill in all the fields in the form</p>";
+            }
+            else if ($_GET["error"] == "wronglogin") {
+                echo "<p>Incorrect information</p>";
+            }
+        }
+?>
             </div>
             
         </div>

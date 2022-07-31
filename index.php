@@ -1,11 +1,15 @@
 <?php
     include_once 'header.php';
     
-    
  ?>
-
+<body>
     <div class="main">
         <section>
+            <?php
+                if (isset($_SESSION["userName"])){
+                    echo "<h1>YOU ARE LOGGED IN</h1>";
+                } else echo "<h1>YOU ARE NOT LOGGED IN</h1>";
+             ?>
             <h1 align="center" class="h1"><br>something</h1>
             
             <div class="div1">
@@ -21,14 +25,20 @@
                 <button id="decrement-el" onclick="decrement()">DECREMENT</button>
                 <p>Enter an integer</p>
                 <input id="num" class="field" placeholder="Type Here!">
-                <button class="exe-btn" onclick="execute()">Execute</button>
+                <button class="exe-btn" onclick="execute()">Calculate</button>
                 <p>
                     Factorial = <span id="fact"></span>
                 </p>
-                <p><a href="calculator.html" id="calcLink">Click here</a> for an actual calculator</p>
                 
+                <p><a href="calculator.html" id="calcLink">Click here</a> for an actual calculator</p>
+                <script src="jsScripts.js">
+                    
+                </script>
             </div>
         </section>
-        <?php 
-        include_once 'footer.php';
-        ?>
+        </div>
+   
+    
+</body>
+</html>
+        

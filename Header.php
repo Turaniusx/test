@@ -1,3 +1,7 @@
+<?php
+    session_start();
+ ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,6 +22,10 @@
             <div class="navButtons"><a href="calculator.php">APPS</a></div>
             <div class="navButtons"><a href="signup.php">SIGN UP</a></div>
             <div class="navButtons"><a href="login.php">LOGIN</a></div>
+            <div class="navButtons"><a href="include/logout_inc.php">LOG OUT</a></div>
+    
             
         </div>
     </nav>
+
+ <!-- REPLACE DIVS WITH <UL> AND <LI> SO U CAN MAKE A SESSION SCRIPT -->

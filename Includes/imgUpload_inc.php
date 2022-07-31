@@ -22,5 +22,5 @@ echo <<<_END
             move_uploaded_file($_FILES['filename']['tmp_name'], $n);
             echo "<img src=$n>";
         }else echo "$name is not accepted";
-    }
+    }else echo "img not detected";
 echo "</body></html>";

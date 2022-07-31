@@ -47,7 +47,7 @@
             </div>
         </div>
     </section>
-    <script src="scripts.js"></script>
+    <script src="jsScripts.js"></script>
     
 </body>
 </html>

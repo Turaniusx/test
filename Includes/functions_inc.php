@@ -2,7 +2,7 @@
 require_once 'database_inc.php';
     //empty fields checker function
     function emptyInputSignup($userName, $userEmail, $userPass, $userPassRep) {
-        $result;
+        
         if (empty($userName) || empty($userEmail) || empty($userPass) || empty($userPassRep)) { //empty() checks if the thing we put inside it has data or not
          //if the user didnt submit anything, run this code
             $result = true; //return true if a mistake exists
@@ -12,7 +12,7 @@ require_once 'database_inc.php';
         return $result;
     }
     function invalidUsername($userName) {
-        $result;
+        
          if (!preg_match("/^[a-zA-Z0-9]*$/", $userName)){ //username character or letter limiter, e.g. -> "Turan*(asd)" is not allowed 
             $result = true;
          } else {
@@ -21,7 +21,7 @@ require_once 'database_inc.php';
          return $result;
     }
     function invalidEmail($userEmail) {
-        $result;
+       
         if (!filter_var($userEmail, FILTER_VALIDATE_EMAIL)) {
             $result = true;
         } else {
@@ -30,7 +30,7 @@ require_once 'database_inc.php';
         return $result;
     }
     function passwordMatch($userPass, $userPassRep) {
-        $result; 
+        
         if ($userPass !== $userPassRep) {
             $result = true;
         } else {
@@ -66,7 +66,7 @@ require_once 'database_inc.php';
         $sql = "INSERT INTO users (userName, userEmail, userPass) VALUES (?, ?, ?)";
         $stmt = mysqli_stmt_init($conn); 
 
-        if (!mysqli_stmt_prepare($stmt, $sql)) { //is this possible checker given from the info
+        if (!mysqli_stmt_prepare($stmt, $sql)) { //"is-this-possible-checker" given from the info
             header("location: ../signup.php?error=stmtfailed");
             exit();
         }
@@ -76,4 +76,40 @@ require_once 'database_inc.php';
         mysqli_stmt_execute($stmt);
         mysqli_stmt_close($stmt);
         header("location: ../index.php?error=none");
+    }
+    function emptyInputLogin($userName, $userPass) {
+        if (empty($userName) || empty($userPass))  {
+            $result = true;
+        } else {
+            $result = false;
+        }
+        return $result;
+    }
+    function loginUser($conn, $userName, $userPass) {
+        $uidExists = userExists($conn, $userName, $userName); //the 2nd $userName is basically a replacement for the Email
+                                                              //we only need 1 or the other to be true so it functions
+        if($uidExists === false) {
+            header("location: ../login.php?error=wronglogin");
+            exit();
+        }
+        $passHashed = $uidExists["userPass"]; //an asociative array doesnt use index numbers but uses names for each index in the array
+        //passHashed = the password in the database
+
+        $checkPass = password_verify($userPass, $passHashed); 
+        //checks the user password input with the one in the db
+
+        if ($checkPass === false) { //if false, passes dont match
+            header("location: ../login.php?error=wronglogin");
+            exit();
+        } else if ($checkPass == true) {
+            //if we wanna store data into a session which is information we can grab onto
+            //from anywhere inside the website as long as we have a session running
+            //we need to start a session first
+            session_start();
+            $_SESSION["usersId"] = $uidExists["usersId"];
+            $_SESSION["userName"] = $uidExists["userName"]; //uidExists["userName"] grabs username from the DB
+            //in the future be less confusing how you name your variables!!!!!
+            header("location: ../index.php");
+            exit();
+        }
     }
