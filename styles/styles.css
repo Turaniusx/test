@@ -1,11 +1,8 @@
-font {
-    font-family: Comic Sans Ms;
-}
 body{
     margin-top: 0px;
     margin-right: 0px;
     background-color: rgb(49, 55, 70);
-    font-family: Open Sans;
+    font-family: Open Sans, Arial;
     
 }
 nav {

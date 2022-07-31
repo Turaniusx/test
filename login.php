@@ -7,7 +7,7 @@
         <div class="main">
             <div class="signUp">
               <h2 class="signH2">LOGIN</h2>
-              <form action="login_inc.php" method="post">
+              <form action="includes/login_inc.php" method="post">
                   <input type="text" name="user" placeholder="Username/Email..">
                     <input type="password" name="pass" placeholder="Password..">
                     <input type="password" name="passRep" placeholder="Repeat Password..">
