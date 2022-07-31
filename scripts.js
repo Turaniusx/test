@@ -49,7 +49,7 @@ buttons.map(kopce => { //buttons are being mapped with an event listener on clic
                     display.innerText = "Error!"; 
                 } break;
             case '!' :                                     
-                try{
+                
                     var f=1;
                     display.innerText = eval(display.innerText);
                     if (display.innerText < 50) {
@@ -61,10 +61,7 @@ buttons.map(kopce => { //buttons are being mapped with an event listener on clic
                     } else {
                         display.innerText = "Try a number smaller than 50"
                     }
-                    
-                } catch {
-                    display.innerText = "Error!";
-                }
+                
                  break;
             default: display.innerText += e.target.innerText;
             console.log(display.innerText);

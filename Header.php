@@ -14,9 +14,9 @@
     <nav>
         <div class="wrapper">
             <a href="index.php"><img src="img/fflogo.png" alt="logo" class="logo"></a>
-            <div class="navButtons"><a href="index.php">Home</a></div>
-            <div class="navButtons"><a href="calculator.html">Calculator</a></div>
-            <div class="navButtons"><a href="signup.php">Login</a></div>
+            <div class="navButtons"><a href="index.php">HOME</a></div>
+            <div class="navButtons"><a href="calculator.php">APPS</a></div>
+            <div class="navButtons"><a href="signup.php">SIGN UP</a></div>
+            <div class="navButtons"><a href="login.php">LOGIN</a></div>
         </div>
     </nav>
-    
