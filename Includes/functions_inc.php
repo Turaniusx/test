@@ -106,7 +106,7 @@ require_once 'database_inc.php';
             //from anywhere inside the website as long as we have a session running
             //we need to start a session first
             session_start();
-            $_SESSION["usersId"] = $uidExists["usersId"];
+            $_SESSION["userId"] = $uidExists["usersId"];
             $_SESSION["userName"] = $uidExists["userName"]; //uidExists["userName"] grabs username from the DB
             //in the future be less confusing how you name your variables!!!!!
             header("location: ../index.php");

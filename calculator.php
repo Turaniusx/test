@@ -1,3 +1,6 @@
+<?php
+    include 'header.php';
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,15 +14,7 @@
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
-    <nav>
-        <div class="wrapper">
-            <a href="index.php"><img src="img/fflogo.png" alt="logo" class="logo"></a>
-            <div class="navButtons"><a href="index.php">HOME</a></div>
-            <div class="navButtons"><a href="calculator.php">APPS</a></div>
-            <div class="navButtons"><a href="signup.php">SIGN UP</a></div>
-            <div class="navButtons"><a href="login.php">LOGIN</a></div>
-        </div>
-    </nav>
+    
     <section>
         <div class="container">
             <div id="display"></div> <!--Displejo na digitrono-->           

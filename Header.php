@@ -22,8 +22,13 @@
             <div class="navButtons"><a href="calculator.php">APPS</a></div>
             <div class="navButtons"><a href="signup.php">SIGN UP</a></div>
             <div class="navButtons"><a href="login.php">LOGIN</a></div>
-            <div class="navButtons"><a href="include/logout_inc.php">LOG OUT</a></div>
-    
+            <div class="navButtons"><a href="includes/logout_inc.php">LOG OUT</a></div>
+            <?php
+                if(isset($_SESSION["userName"])){
+                    echo "<h1>YOU ARE LOGGED IN</h1>";
+                } else echo "<h1>YOU ARE <u>NOT</u> LOGGED IN</h1>";
+             ?>
+
             
         </div>
     </nav>

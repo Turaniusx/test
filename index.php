@@ -5,11 +5,7 @@
 <body>
     <div class="main">
         <section>
-            <?php
-                if (isset($_SESSION["userName"])){
-                    echo "<h1>YOU ARE LOGGED IN</h1>";
-                } else echo "<h1>YOU ARE NOT LOGGED IN</h1>";
-             ?>
+            
             <h1 align="center" class="h1"><br>something</h1>
             
             <div class="div1">
