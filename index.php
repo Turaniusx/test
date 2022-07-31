@@ -1,17 +1,19 @@
 <?php
     include_once 'header.php';
-    include_once 'footer.php';
+    
+    
  ?>
 
     <div class="main">
         <section>
             <h1 align="center" class="h1"><br>something</h1>
+            
             <div class="div1">
                 
                 <p >Image uploader</p>
-                <form method="upload"></form>
-                <input type="file" name="upload" placeholder="stfu">
+                <?php include 'includes/imgUpload_inc.php';?>
             </div>
+            
             <div class="div2">
                 <p>Number Incrementer</p>
                 <p class="calc" id="display-el">0</p>
@@ -27,5 +29,6 @@
                 
             </div>
         </section>
-        
-
+        <?php 
+        include_once 'footer.php';
+        ?>

@@ -1,4 +1,5 @@
 <?php
+require_once 'database_inc.php';
     //empty fields checker function
     function emptyInputSignup($userName, $userEmail, $userPass, $userPassRep) {
         $result;

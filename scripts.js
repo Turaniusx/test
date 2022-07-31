@@ -1,8 +1,5 @@
 let num1 = document.getElementById("display-el") /*zima html element po identitet*/
-
-
 let count = 0
-
 function increment() {
     count++
     num1.textContent = count //prints the html in the form of text
@@ -10,7 +7,6 @@ function increment() {
 }
 function decrement() {
     count--
-
     num1.textContent = count
     console.log(count)
 }
@@ -20,10 +16,9 @@ function execute() {
     if (n < 0) {
         document.getElementById("fact").innerHTML = "Error!"
     } else if (n >= 20) {
-        document.getElementById("fact").innerHTML = "Number too big(thats what she said). Use a number smaller than 20."
+        document.getElementById("fact").innerText = "Use a number smaller than 20."
     }
     else {
-
     if (n <= 20) {
         for(i=1; i<=n; i++){
             f *= i;

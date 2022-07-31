@@ -18,5 +18,6 @@
             <div class="navButtons"><a href="calculator.php">APPS</a></div>
             <div class="navButtons"><a href="signup.php">SIGN UP</a></div>
             <div class="navButtons"><a href="login.php">LOGIN</a></div>
+            
         </div>
     </nav>
