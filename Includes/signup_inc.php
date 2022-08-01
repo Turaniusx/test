@@ -40,7 +40,7 @@ if (isset($_POST["submit"]))  {
        }
 
        
-       createUser($conn, $userName, $userEmail, $userPass); //signing up the user
+    createUser($conn, $userName, $userEmail, $userPass); //signing up the user
 
 } else {
     header("location: ../signup.php"); //a function that can send the user to another place
