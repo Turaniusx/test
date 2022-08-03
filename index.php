@@ -27,6 +27,7 @@
                 </p>
                 
                 <p><a href="calculator.html" id="calcLink">Click here</a> for an actual calculator</p>
+                <p>test</p>
                 <script src="jsScripts.js">
                     
                 </script>
